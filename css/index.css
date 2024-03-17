@@ -22,8 +22,6 @@ ul li a{
 
  ul li a:hover,
  ul li a.active{
-    background: blue;
-    color: #fff;
     transition: 0.5s;
 }
 
@@ -33,15 +31,20 @@ ul li a{
 
 @media (max-width: 768px){
     .menu-toggle{
+        margin-top: 0;
         display: block;
         width: 40px;
         height: 40px;
         margin: 10px;
-        float: right;
+        margin-left: 300px;
         cursor: pointer;
         text-align: center;
         font-size: 30px;
-        color: blue;
+        color: skyblue;
+    }
+
+    #menu{
+        margin-left: 30px;
     }
 
     .menu-toggle::before{
@@ -54,13 +57,16 @@ ul li a{
         content: '\f00d';
     }
 
-    nav{
+    ul{
         display: none;
     }
 
     ul.active{
         display: block;
+        flex-direction: column;
         width: 100%;
+        text-align: center;
+        margin-left: -460px;
     }
 
     ul.active ul{
